@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 
 interface LoginContainerProps {
@@ -15,8 +16,17 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ onLogin }) => {
   };
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Login</h1>
+    <div className="w-full p-12">
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold py-2">
+          Login
+          <br />
+        </h1>
+        Don't have an account?{" "}
+        <Link to="/auth/register" className="font-semibold hover:underline">
+          Sign up
+        </Link>
+      </div>
       <LoginForm
         email={email}
         setEmail={setEmail}
