@@ -9,41 +9,46 @@ import CarouselContainer from "./CarouselContainer";
 const AuthContainer: React.FC<AuthAction> = ({ action }) => {
   const dispatch = useDispatch();
 
+  // Handle login form submission
   const handleLogin = (email: string, password: string) => {
     dispatch(login({ email, password }));
   };
 
+  // Handle registration form submission
   const handleRegister = (
     username: string,
     email: string,
-    password: string,
+    password: string
   ) => {
     dispatch(register({ username, email, password }));
   };
 
   return (
-    <div className="flex-1 flex gap-2 items-center justify-center border-2 border-blue-200 p-2">
-      {/* Left side: Slider (Hidden on mobile) */}
-      <div className="hidden md:block md:w-1/2 h-full border-2 border-yellow-300 p-2 overflow-hidden">
-        {/* <CarouselContainer /> */}
-      </div>
-      {/* Right side: Login form */}
-      <div className="w-full md:w-1/2 h-full border-2 border-yellow-300 p-2">
+    <div className="flex flex-col lg:space-x-8 lg:flex-row items-center justify-center p-2 bg-white shadow-md rounded-xl overflow-hidden">
+      {/* Left side: Carousel (Hidden on mobile) */}
+      <div className="hidden lg:flex lg:w-1/2 h-full p-2">
         <CarouselContainer />
+      </div>
+
+      {/* Right side: Form container */}
+      <div className="w-full lg:w-1/2 h-full p-4 flex items-center justify-center">
+        {/* Conditionally render the Login or Register form based on the action */}
+        {action === "login" && <LoginContainer onLogin={handleLogin} />}
+        {action === "register" && (
+          <RegisterContainer onRegister={handleRegister} />
+        )}
+        {action === "reset-password" && (
+          <div className="text-center">
+            <h2 className="text-xl font-semibold">Reset Password</h2>
+            <p className="mt-2 text-gray-600">
+              Please enter your email to reset your password.
+            </p>
+            {/* Add reset password form here */}
+          </div>
+        )}
       </div>
     </div>
   );
-
-  // switch (action) {
-  //   case "login":
-  //     return <LoginContainer onLogin={handleLogin} />;
-  //   case "register":
-  //     return <RegisterContainer onRegister={handleRegister} />;
-  //   case "reset-password":
-  //     return <div>Reset Password Component</div>; // Placeholder for reset password
-  //   default:
-  //     return null; // Shouldn't reach here due to validation in AuthPage
-  // }
 };
 
 export default AuthContainer;

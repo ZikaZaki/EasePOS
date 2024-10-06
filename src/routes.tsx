@@ -1,46 +1,54 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoadingSpinner from "./components/LoadingSpinner";
-import HeaderLayout from "./layouts/HeaderLayout";
-import HomePage from "./pages/Home/HomePage";
+import { MainLayout, PlainLayout } from "./layouts";
 
-// Lazy Load....
-const AuthPage = lazy(() => import("./pages/Auth/AuthPage"));
-const DashboardPage = lazy(() => import("./pages/Dashboard/DashboardPage"));
+// Lazy loading for pages
+const AuthPage = lazy(() => import("./pages/Auth"));
+const DashboardPage = lazy(() => import("./pages/Dashboard"));
+const HomePage = lazy(() => import("./pages/Home"));
+
+/**
+ * Wrapper for lazy-loaded pages with Suspense and fallback spinner
+ */
+const SuspenseWrapper = (Component: React.LazyExoticComponent<React.FC>) => (
+  <Suspense fallback={<LoadingSpinner />}>
+    <Component />
+  </Suspense>
+);
 
 const router = createBrowserRouter([
+  // MainLayout for pages with the header
   {
     path: "/",
-    element: <HeaderLayout />,
+    element: <MainLayout />, // Using MainLayout for all header-based pages
     children: [
       {
-        path: "",
-        element: (
-          <Suspense fallback={<LoadingSpinner />}>
-            <HomePage />
-          </Suspense>
-        ),
+        path: "/", // HomePage with MainLayout
+        element: SuspenseWrapper(HomePage),
       },
       {
-        path: "/auth/:action",
-        element: (
-          <Suspense fallback={<LoadingSpinner />}>
-            <AuthPage />
-          </Suspense>
-        ),
+        path: "/auth/:action", // Auth page (login/sign up based on dynamic route)
+        element: SuspenseWrapper(AuthPage),
       },
     ],
   },
-  // Below is paths where the HeaderLayout is not needed
+  // PlainLayout for pages without a header (like Dashboard and About)
   {
-    path: "/dashboard",
-    element: (
-      <Suspense fallback={<LoadingSpinner />}>
-        <DashboardPage />
-      </Suspense>
-    ),
+    path: "/",
+    element: <PlainLayout />,
+    children: [
+      {
+        path: "dashboard",
+        element: SuspenseWrapper(DashboardPage),
+      },
+      // {
+      //   path: "about",
+      //   element: SuspenseWrapper(AboutPage),
+      // },
+    ],
   },
-  // Add other routes here
+  // Add additional routes with appropriate layouts here
 ]);
 
 const AppRoutes: React.FC = () => {

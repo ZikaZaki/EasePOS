@@ -1,47 +1,61 @@
 // src/components/Header/Navigation.tsx
-
 import React from "react";
 import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   return (
-    <nav
-      className="w-full flex space-x-8 items-center"
-      aria-label="Main Navigation"
-    >
-      <ul className="w-full flex justify-center items-center space-x-8">
+    <nav aria-label="Main Navigation">
+      <ul className="flex space-x-4">
         <li>
-          <Link to="/" className="hover:underline" aria-label="Go to Home">
+          <Link
+            to="/"
+            className="hover:text-blue-300 hover:underline transition-colors"
+            aria-label="Go to Home"
+          >
             Home
           </Link>
         </li>
         <li>
           <Link
             to="/"
-            className="hover:underline"
+            className="hover:text-blue-300 hover:underline transition-colors"
             aria-label="Learn more About us"
           >
             About
           </Link>
         </li>
         <li>
-          <Link to="/" className="hover:underline" aria-label="Contact us">
+          <Link
+            to="/"
+            className="hover:text-blue-300 hover:underline transition-colors"
+            aria-label="Contact us"
+          >
             Contact
           </Link>
         </li>
-      </ul>
-      <div className="flex items-center space-x-3">
-        <Link to="/auth/login" aria-label="Login">
-          <button className="min-w-20 bg-blue-500 text-white p-2 rounded hover:bg-blue-600">
+        {/* Add a separator for better UI (optional).
+          This will push the (login sign up) buttons to the end
+        */}
+        <div className="flex-grow" />
+        <li>
+          <Link
+            to="/auth/login"
+            className="bg-blue-700 hover:bg-blue-800 hover:text-white transition-colors rounded px-3 py-1"
+            aria-label="Login"
+          >
             Login
-          </button>
-        </Link>
-        <Link to="/auth/register" aria-label="Register">
-          <button className="min-w-20 bg-green-500 text-white p-2 rounded hover:bg-green-600">
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/auth/register"
+            className="bg-blue-700 hover:bg-blue-800 hover:text-white transition-colors rounded px-3 py-1"
+            aria-label="Login"
+          >
             Sign Up
-          </button>
-        </Link>
-      </div>
+          </Link>
+        </li>
+      </ul>
     </nav>
   );
 };

@@ -3,7 +3,8 @@ import React, { useState, useEffect } from "react";
 import { CarouselSlide } from "../types/authTypes";
 import Carousel from "../components/Carousel";
 
-const images = [
+// Sample images for the carousel
+const images: CarouselSlide[] = [
     {
         id: 1,
         title: "Real-Time Data Orchestration.",
@@ -34,24 +35,21 @@ const images = [
     },
 ];
 
-const CarouselContainer: React.FC = () => {
-    const [slides, setSlides] = useState<CarouselSlide[]>([]);
+const AuthCarouselContainer: React.FC = () => {
+  const [slides, setSlides] = useState<CarouselSlide[]>(images);
 
-    // Optional: Fetch slides from an API or other source
-    useEffect(() => {
-        setSlides(images);
-        // Example: Fetch slides from an API
-        // fetch('/api/slides')
-        //     .then(response => response.json())
-        //     .then(data => setSlides(data))
-        //     .catch(error => console.error('Error fetching slides:', error));
-    }, []);
+  // Optional: Fetch slides from an API or other source
+  useEffect(() => {
+    // Example: Fetch slides from an API
+    // setSlides(fetchedSlides);
+  }, []);
 
-    return (
-        <div className="flex h-full w-full items-center justify-center rounded-2xl bg-gray-100 border-2 border-red-300 p-8">
-            <Carousel slides={slides} />
-        </div>
-    );
+  return (
+    <div className="flex flex-col gap-4 items-center justify-center rounded-2xl overflow-hidden">
+      <Carousel slides={slides} />
+      <span className="pagination-bullets flex justify-center items-center space-x-2 p-2" />
+    </div>
+  );
 };
 
-export default CarouselContainer;
+export default AuthCarouselContainer;
