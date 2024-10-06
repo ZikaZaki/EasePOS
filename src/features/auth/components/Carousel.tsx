@@ -18,12 +18,11 @@ const Carousel: React.FC<{ slides: CarouselSlide[] }> = ({ slides }) => {
       pagination={{
         clickable: true,
         type: "bullets",
-        el: ".pagination-bullets",
       }}
       slidesPerView={1}
       loop={true}
       modules={[Autoplay, Pagination]}
-      className="w-full h-full rounded-2xl"
+      className="h-full w-full rounded-2xl"
     >
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>

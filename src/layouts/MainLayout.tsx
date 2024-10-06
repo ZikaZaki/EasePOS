@@ -5,13 +5,13 @@ import Header from "../components/Header";
 
 const MainLayout: React.FC = () => {
   return (
-    <div className="h-screen h-screen-dvh border-2 border-red-400 overflow-hidden">
+    <div className="flex flex-col h-screen h-screen-dvh">
       {/* Header section */}
       <Header />
 
       {/* Main content goes here */}
-      <main className=" bg-gray-100 py-8 border-2 border-blue-500 overflow-hidden">
-        <div className="container mx-auto px-4 overflow-hidden">
+      <main className="flex bg-gray-100 py-8 overflow-auto">
+        <div className="container mx-auto px-4">
           <Outlet />
         </div>
       </main>
