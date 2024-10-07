@@ -45,7 +45,7 @@ const AuthCarouselContainer: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex items-center justify-center rounded-lg overflow-hidden">
+    <div className="flex flex-col overflow-hidden">
       <Carousel slides={slides} />
     </div>
   );

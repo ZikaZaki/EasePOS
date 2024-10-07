@@ -15,7 +15,7 @@ const AuthPage: React.FC = () => {
   }
 
   return (
-    <div className="flex h-full mx-auto p-12 bg-white  rounded-2xl border border-gray-100 shadow-lg overflow-hidden">
+    <div className="mx-auto container flex items-center p-2">
       <AuthContainer action={action} />
     </div>
   );

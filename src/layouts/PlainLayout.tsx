@@ -4,12 +4,10 @@ import { Outlet } from "react-router-dom";
 
 const PlainLayout: React.FC = () => {
   return (
-    <div className="min-h-screen min-h-screen-dvh flex flex-col border-2 border-red-400">
+    <div className="flex flex-col min-h-screen-dvh h-screen-dvh overflow-hidden">
       {/* Main content without Header */}
-      <main className="flex-grow bg-gray-100 py-8 border-2 border-blue-500">
-        <div className="container mx-auto px-4">
-          <Outlet />
-        </div>
+      <main className="flex-1 flex justify-center p-8 border-2 border-blue-500 overflow-auto">
+        <Outlet />
       </main>
     </div>
   );

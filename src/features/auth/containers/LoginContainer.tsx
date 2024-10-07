@@ -14,18 +14,13 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ onLogin }) => {
     e.preventDefault();
     onLogin(email, password);
   };
-
   return (
-    <div className="w-full p-12">
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold py-2">
-          Login
-          <br />
-        </h1>
-        Don't have an account?{" "}
-        <Link to="/auth/register" className="font-semibold hover:underline">
-          Sign up
-        </Link>
+    <div className="flex flex-col w-full p-4 lg:px-6 lg:py-4 rounded-3xl border-2 border-violet-100 overflow-hidden">
+      <div className="flex flex-col space-y-2 mb-6 px-2">
+        <h1 className="text-3xl font-bold">Login</h1>
+        <p className="font-medium text-md text-gray-500">
+          Welcome back! Please enter you details.
+        </p>
       </div>
       <LoginForm
         email={email}

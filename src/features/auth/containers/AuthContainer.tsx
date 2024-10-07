@@ -24,14 +24,14 @@ const AuthContainer: React.FC<AuthAction> = ({ action }) => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row space-x-12 items-center justify-center rounded-2xl overflow-hidden">
+    <div className="w-full h-full max-h-full max-w-[68rem] flex gap-8 justify-center p-3 rounded-2xl bg-white shadow-md border border-gray-100 overflow-hidden">
       {/* Left side: Carousel (Hidden on mobile) */}
-      <div className="hidden lg:flex lg:w-1/2 h-full">
+      <div className="hidden lg:w-1/2 lg:flex">
         <CarouselContainer />
       </div>
 
       {/* Right side: Form container */}
-      <div className="flex lg:w-1/2 h-full p-4 items-center justify-center border border-gray-200 rounded-2xl">
+      <div className="lg:w-1/2 flex">
         {/* Conditionally render the Login or Register form based on the action */}
         {action === "login" && <LoginContainer onLogin={handleLogin} />}
         {action === "register" && (

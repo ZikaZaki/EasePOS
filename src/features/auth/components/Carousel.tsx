@@ -22,11 +22,11 @@ const Carousel: React.FC<{ slides: CarouselSlide[] }> = ({ slides }) => {
       slidesPerView={1}
       loop={true}
       modules={[Autoplay, Pagination]}
-      className="h-full w-full rounded-2xl"
+      className="h-full w-full rounded-3xl"
     >
       {slides.map((slide) => (
-        <SwiperSlide key={slide.id}>
-          <div className="relative h-full w-full overflow-hidden">
+        <SwiperSlide key={slide.id} className="">
+          <div className="relative flex items-center justify-center h-full w-full overflow-hidden">
             {/* Image */}
             <img
               src={slide.imageUrl}
