@@ -1,8 +1,7 @@
-// src/components/Header/Header.tsx
-
 import React from "react";
-import Logo from "../Logo"; // Adjust the path if necessary
-import Navigation from "../Navigation"; // Adjust the path if necessary
+import Logo from "@shared/components/Logo";
+import Navigation from "@shared/components/Navigation";
+// import {Logo, Navigation} from "./index";
 
 const Header: React.FC = () => {
   return (

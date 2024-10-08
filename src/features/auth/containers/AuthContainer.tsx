@@ -1,10 +1,20 @@
-import React from "react";
+import Reac from "react";
 import { useDispatch } from "react-redux";
-import { login, register } from "../redux/authSlice";
-import { AuthAction } from "../types/authTypes";
-import LoginContainer from "./LoginContainer";
-import RegisterContainer from "./RegisterContainer";
-import CarouselContainer from "./CarouselContainer";
+// import { login, register } from "@feature-redux/auth";
+import { login, register } from "../redux";
+import { AuthAction } from "@features/auth/types";
+
+// import {
+//   CarouselContainer,
+//   LoginContainer,
+//   RegisterContainer,
+// } from "@feature-containers/auth";
+
+import {
+  CarouselContainer,
+  LoginContainer,
+  RegisterContainer,
+} from "@features/auth/containers";
 
 const AuthContainer: React.FC<AuthAction> = ({ action }) => {
   const dispatch = useDispatch();
@@ -24,7 +34,7 @@ const AuthContainer: React.FC<AuthAction> = ({ action }) => {
   };
 
   return (
-    <div className="max-h-full max-w-[68rem] flex gap-8 justify-center p-2 lg:p-4 rounded-2xl bg-white shadow-md border border-gray-100 overflow-hidden">
+    <div className="max-h-full max-w-[68rem] lg:w-full flex gap-8 justify-center p-2 lg:p-4 rounded-2xl bg-white shadow-md border border-gray-100 overflow-hidden">
       {/* Left side: Carousel (Hidden on mobile) */}
       <div className="hidden lg:w-1/2 lg:flex min-h-full">
         <CarouselContainer />

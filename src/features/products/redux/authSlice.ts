@@ -1,5 +1,7 @@
+// src/features/auth/redux/authSlice.ts
+
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AuthState, User } from "@feature-types/auth";
+import { AuthState, User } from "../types/productsTypes"; // Import types from the new file
 
 // Initial state
 const initialState: AuthState = {

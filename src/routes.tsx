@@ -1,12 +1,27 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LoadingSpinner from "./components/LoadingSpinner";
-import { MainLayout, PlainLayout } from "./layouts";
+// import { LoadingSpinner } from "@shared/components";
+// import { LoadingSpinner } from "@shared";
+import { LoadingSpinner } from "@shared/components";
+// import { MainLayout, PlainLayout } from "./layouts";
+import { MainLayout, PlainLayout } from "@layouts/index";
+// // import {HomePage, AuthPage, DashboardPage} from "@pages/"
+// // import { AuthPage, HomePage, DashboardPage } from "@pages";
 
 // Lazy loading for pages
-const AuthPage = lazy(() => import("./pages/Auth"));
-const DashboardPage = lazy(() => import("./pages/Dashboard"));
-const HomePage = lazy(() => import("./pages/Home"));
+const AuthPage = lazy(() =>
+  import("@pages/Auth").then((module) => ({
+    default: module.AuthPage,
+  }))
+);
+const DashboardPage = lazy(() =>
+  import("@pages/Dashboard").then((module) => ({
+    default: module.DashboardPage,
+  }))
+);
+const HomePage = lazy(() =>
+  import("@pages/Home").then((module) => ({ default: module.HomePage }))
+);
 
 /**
  * Wrapper for lazy-loaded pages with Suspense and fallback spinner

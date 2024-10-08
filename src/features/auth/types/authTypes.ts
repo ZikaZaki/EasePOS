@@ -1,5 +1,3 @@
-// src/features/auth/types/authTypes.ts
-
 /**
  * Interface representing the different authentication actions.
  */

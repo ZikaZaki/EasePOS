@@ -1,7 +1,7 @@
 // src/layouts/MainLayout.tsx (Includes both a [Header + Main])
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../shared/components/Header";
 
 const MainLayout: React.FC = () => {
   return (

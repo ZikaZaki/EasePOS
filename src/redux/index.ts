@@ -1,5 +1,4 @@
 // src/redux/index.ts
-
 import store, { RootState, AppDispatch } from "./store"; // Import store and types
 
 // Export the store

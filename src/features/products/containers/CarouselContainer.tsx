@@ -1,7 +1,6 @@
 // src/features/auth/containers/AuthCarouselContainer.tsx
 import React, { useState, useEffect } from "react";
-import { CarouselSlide } from "@feature-types/auth";
-// import { Carousel } from "@feature-components/auth";
+import { CarouselSlide } from "../types/productsTypes";
 import Carousel from "../components/Carousel";
 
 // Sample images for the carousel

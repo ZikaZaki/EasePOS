@@ -2,9 +2,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+// import { CarouselSlide } from "@features/auth/authTypes";
+import { CarouselSlide } from "../types/authTypes";
 import "swiper/css";
 import "swiper/css/pagination"; // Import pagination styles
-import { CarouselSlide } from "../types/authTypes";
 
 const Carousel: React.FC<{ slides: CarouselSlide[] }> = ({ slides }) => {
   return (
