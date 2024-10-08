@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 
 interface LoginContainerProps {
@@ -15,13 +14,7 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ onLogin }) => {
     onLogin(email, password);
   };
   return (
-    <div className="flex flex-col w-full p-4 lg:px-6 lg:py-4 rounded-3xl border-2 border-violet-100 overflow-hidden">
-      <div className="flex flex-col space-y-2 mb-6 px-2">
-        <h1 className="text-3xl font-bold">Login</h1>
-        <p className="font-medium text-md text-gray-500">
-          Welcome back! Please enter you details.
-        </p>
-      </div>
+    <div className="w-full h-full p-4 lg:px-6 lg:py-4 rounded-3xl border-2 border-violet-100 overflow-hidden items-center justify-center">
       <LoginForm
         email={email}
         setEmail={setEmail}

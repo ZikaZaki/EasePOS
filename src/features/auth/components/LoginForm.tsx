@@ -17,61 +17,67 @@ const LoginForm: React.FC<LoginFormProps> = ({
   onSubmit,
 }) => {
   return (
-    <form onSubmit={onSubmit} className="flex-1 overflow-y-auto">
-      {/* Email address */}
-      <div className="flex flex-col gap-1.5 px-2 mt-4">
-        <label htmlFor="email" className="text-base font-medium">
-          Email
-        </label>
-        <input
-          id="email"
-          type={"email"}
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          className="w-full p-3 border-2 border-gray-100 rounded"
-          required
-        />
+    <div className="flex flex-col w-full h-full justify-center overflow-y-auto">
+      <div className="flex flex-col space-y-2 mb-5 px-2">
+        <h1 className="text-2xl font-bold">Login</h1>
+        <p className="font-medium text-md text-gray-500">Welcome back!</p>
       </div>
-      {/* Password */}
-      <div className="flex flex-col gap-1.5 px-2 mt-4">
-        <label htmlFor="password" className="text-base font-medium">
-          Password
-        </label>
-        <input
-          id="password"
-          type={"password"}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Enter your password"
-          className="w-full p-3 border-2 border-gray-100 rounded"
-          required
-        />
-      </div>
-      {/* Remember me and Forgot password */}
-      <div className="flex justify-between items-center gap-4 px-3 mt-2">
-        <div className="space-x-1">
-          <input id="remember-me" type="checkbox" />
-          <label className="font-normal text-sm" htmlFor="remember-me">
-            Remember for 30 days
+      <form onSubmit={onSubmit}>
+        {/* Email address */}
+        <div className="flex flex-col gap-1.5 px-2 mt-4">
+          <label htmlFor="email" className="text-base font-medium">
+            Email
           </label>
+          <input
+            id="email"
+            type={"email"}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Enter your email"
+            className="w-full p-3 border-2 border-gray-100 rounded"
+            required
+          />
         </div>
-        <Link
-          to="/forgot-password"
-          className="font-normal text-sm hover:underline"
-        >
-          Forgot password?
-        </Link>
-      </div>
-      {/* Login button */}
-      <div className="flex flex-col px-2 mt-4">
-        <button
-          type="submit"
-          className="active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-3 bg-violet-500 rounded-lg text-white font-bold text-lg"
-        >
-          Login
-        </button>
-      </div>
+        {/* Password */}
+        <div className="flex flex-col gap-1.5 px-2 mt-4">
+          <label htmlFor="password" className="text-base font-medium">
+            Password
+          </label>
+          <input
+            id="password"
+            type={"password"}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Enter your password"
+            className="w-full p-3 border-2 border-gray-100 rounded"
+            required
+          />
+        </div>
+        {/* Remember me and Forgot password */}
+        <div className="flex justify-between items-center gap-4 px-3 mt-2">
+          <div className="space-x-1">
+            <input id="remember-me" type="checkbox" />
+            <label className="font-normal text-sm" htmlFor="remember-me">
+              Remember for 30 days
+            </label>
+          </div>
+          <Link
+            to="/forgot-password"
+            className="font-normal text-sm hover:underline"
+          >
+            Forgot password?
+          </Link>
+        </div>
+        {/* Login button */}
+        <div className="flex flex-col px-2 mt-4">
+          <button
+            type="submit"
+            className="active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-3 bg-violet-500 rounded-lg text-white font-semibold text-base"
+          >
+            Login
+          </button>
+        </div>
+      </form>
       {/* OR divider */}
       <div className="flex items-center mt-4">
         <div className="flex-grow border-t border-gray-300"></div>
@@ -80,7 +86,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
       </div>
       {/* Google Sign in */}
       <div className="flex flex-col px-2 mt-4">
-        <button className="flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-3  rounded-xl text-gray-700 font-semibold text-lg border-2 border-gray-150 ">
+        <button className="flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-3  rounded-xl text-gray-700 font-semibold text-base border-2 border-gray-150 ">
           <svg
             width="24"
             height="24"
@@ -112,13 +118,13 @@ const LoginForm: React.FC<LoginFormProps> = ({
       <div className="flex justify-center items-center px-3 my-3">
         <p className="font-medium text-base">Don't have an account?</p>
         <Link
-          to="auth/register"
+          to="/auth/register"
           className="ml-2 font-medium text-base text-violet-500"
         >
           Sign up
         </Link>
       </div>
-    </form>
+    </div>
   );
 };
 
