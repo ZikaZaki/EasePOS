@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Navigation: React.FC = () => {
   return (
-    <nav aria-label="Main Navigation">
+    <nav className="flex" aria-label="Main Navigation">
       <ul className="hidden lg:flex space-x-4">
         <li>
           <Link

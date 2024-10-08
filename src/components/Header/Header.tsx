@@ -6,8 +6,8 @@ import Navigation from "../Navigation"; // Adjust the path if necessary
 
 const Header: React.FC = () => {
   return (
-    <header className="h-16 bg-gray-800 text-white">
-      <div className="container mx-auto py-4 flex justify-between items-center">
+    <header className="flex h-14 bg-gray-800 text-white font-semibold">
+      <div className="container mx-auto py-2 flex justify-between items-center">
         <Logo />
         <Navigation />
       </div>
