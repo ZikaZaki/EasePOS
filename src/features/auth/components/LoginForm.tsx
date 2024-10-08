@@ -54,7 +54,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           />
         </div>
         {/* Remember me and Forgot password */}
-        <div className="flex justify-between items-center gap-4 px-3 mt-2">
+        <div className="flex justify-between items-center space-x-4 px-2 mt-2">
           <div className="space-x-1">
             <input id="remember-me" type="checkbox" />
             <label className="font-normal text-sm" htmlFor="remember-me">
