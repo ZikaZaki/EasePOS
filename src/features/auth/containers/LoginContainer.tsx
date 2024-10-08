@@ -14,7 +14,7 @@ const LoginContainer: React.FC<LoginContainerProps> = ({ onLogin }) => {
     onLogin(email, password);
   };
   return (
-    <div className="w-full h-full p-4 lg:px-6 lg:py-4 rounded-3xl border-2 border-violet-100 overflow-hidden items-center justify-center">
+    <div className="flex-1 p-2 lg:p-3 rounded-3xl border-2 border-violet-100 ">
       <LoginForm
         email={email}
         setEmail={setEmail}

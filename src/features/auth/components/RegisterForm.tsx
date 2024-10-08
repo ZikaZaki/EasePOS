@@ -28,15 +28,15 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
   onSubmit,
 }) => {
   return (
-    <div className="flex flex-col w-full h-full justify-center overflow-y-auto">
-      <div className="flex flex-col space-y-2 mb-5 px-2">
+    <div className="h-full w-full flex flex-col">
+      <div className="flex flex-col gap-2 mt-2 mb-4 px-2">
         <h1 className="text-2xl font-bold">Register</h1>
         <div className="flex items-center space-x-2">
           {/* Already have an account? Sing In */}
           <p className="font-medium text-base">Already have an account?</p>
           <Link
             to="/auth/login"
-            className="ml-2 font-medium text-base text-violet-500"
+            className="font-medium text-base text-violet-500"
           >
             Sign in
           </Link>
@@ -117,7 +117,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
       {/* Google Sign Up */}
-      <div className="flex flex-col px-2 mt-4">
+      <div className="flex flex-col px-2 my-4">
         <button className="flex items-center justify-center gap-2 active:scale-[.98] active:duration-75 transition-all hover:scale-[1.01]  ease-in-out transform py-3  rounded-xl text-gray-700 font-semibold text-base border-2 border-gray-150 ">
           <svg
             width="24"

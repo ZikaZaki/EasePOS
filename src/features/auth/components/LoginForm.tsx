@@ -17,8 +17,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
   onSubmit,
 }) => {
   return (
-    <div className="flex flex-col w-full h-full justify-center overflow-y-auto">
-      <div className="flex flex-col space-y-2 mb-5 px-2">
+    <div className="h-full w-full flex flex-col">
+      <div className="flex flex-col gap-2 mt-2 mb-4 px-2">
         <h1 className="text-2xl font-bold">Login</h1>
         <p className="font-medium text-md text-gray-500">Welcome back!</p>
       </div>
@@ -115,7 +115,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         </button>
       </div>
       {/* Don't have an account? Sing Up */}
-      <div className="flex justify-center items-center px-3 my-3">
+      <div className="flex justify-center items-center px-3 my-2">
         <p className="font-medium text-base">Don't have an account?</p>
         <Link
           to="/auth/register"
