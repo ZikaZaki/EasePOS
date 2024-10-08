@@ -24,7 +24,7 @@ const AuthContainer: React.FC<AuthAction> = ({ action }) => {
   };
 
   return (
-    <div className="max-h-full max-w-[68rem] flex gap-8 justify-center p-3 rounded-2xl bg-white shadow-md border border-gray-100 overflow-hidden">
+    <div className="max-h-full max-w-[68rem] flex gap-8 justify-center p-6 rounded-2xl bg-white shadow-md border border-gray-100 overflow-hidden">
       {/* Left side: Carousel (Hidden on mobile) */}
       <div className="hidden lg:w-1/2 lg:flex">
         <CarouselContainer />
