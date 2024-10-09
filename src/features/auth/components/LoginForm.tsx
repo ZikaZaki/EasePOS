@@ -1,13 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface LoginFormProps {
-  email: string;
-  setEmail: (value: string) => void;
-  password: string;
-  setPassword: (value: string) => void;
-  onSubmit: (e: React.FormEvent) => void;
-}
+import { LoginFormProps } from "@features/auth/types";
 
 const LoginForm: React.FC<LoginFormProps> = ({
   email,

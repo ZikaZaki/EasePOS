@@ -6,23 +6,23 @@ interface RegisterContainerProps {
     firstName: string,
     lastName: string,
     email: string,
-    password: string,
-    confirmPassword: string
+    password: string
   ) => void;
 }
 
 const RegisterContainer: React.FC<RegisterContainerProps> = ({
   onRegister,
 }) => {
-  const [firstName, setFirstName] = useState<string>("");
-  const [lastName, setLastName] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
-  const [confirmPassword, setConfirmPassword] = useState<string>("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onRegister(firstName, lastName, email, password, confirmPassword);
+    console.log("Registering user...");
+    onRegister(firstName, lastName, email, password);
   };
 
   return (

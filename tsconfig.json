@@ -18,12 +18,13 @@
     "baseUrl": "./src",
     "paths": {
       "@/*": ["*"],
-      "@layouts/*": ["layouts/*"],
-      "@shared/*": ["shared/*"],
+      "@layouts": ["layouts"],
+      "@services": ["services"],
+      "@types": ["types"],
       "@pages/*": ["pages/*"],
       "@hooks/*": ["hooks/*"],
       "@redux/*": ["redux/*"],
-      "@services/*": ["services/*"],
+      "@shared/*": ["shared/*"],
       "@features/*": ["features/*"]
     }
   },

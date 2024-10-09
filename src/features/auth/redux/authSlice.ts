@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AuthState, User } from "@features/auth/types";
+import { AuthState, User } from "@types";
 
 // Initial state
 const initialState: AuthState = {
@@ -15,7 +15,11 @@ const authSlice = createSlice({
     login(state, action: PayloadAction<{ email: string; password: string }>) {
       // Simulate a successful login; replace with real API call later
       state.isAuthenticated = true;
-      state.user = { username: "User", email: action.payload.email }; // Mock user data
+      state.user = {
+        firstName: "User",
+        lastName: "User",
+        email: action.payload.email,
+      }; // Mock user data
     },
     logout(state) {
       state.isAuthenticated = false;
@@ -27,7 +31,8 @@ const authSlice = createSlice({
       // This is good because passwords should never be stored in plaintext in the state or any database.
       state.isAuthenticated = true;
       state.user = {
-        username: action.payload.username,
+        firstName: action.payload.firstName,
+        lastName: action.payload.lastName,
         email: action.payload.email,
       }; // Mock user data
     },

@@ -1,10 +1,10 @@
 // src/features/auth/containers/CarouselContainer.tsx
 import React, { useState, useEffect } from "react";
-import { Carousel } from "@features/auth/components";
-import { CarouselSlide } from "@features/auth/types";
+import { Slider } from "@features/auth/components";
+import { Slide } from "@features/auth/types";
 
-// Sample images for the carousel
-const images: CarouselSlide[] = [
+// Sample images for the slide
+const images: Slide[] = [
   {
     id: 1,
     title: "Real-Time Data Orchestration.",
@@ -49,8 +49,8 @@ const images: CarouselSlide[] = [
   },
 ];
 
-const AuthCarouselContainer: React.FC = () => {
-  const [slides, setSlides] = useState<CarouselSlide[]>([]);
+const SliderContainer: React.FC = () => {
+  const [slides, setSlides] = useState<Slide[]>([]);
 
   // Optional: Fetch slides from an API or other source
   useEffect(() => {
@@ -61,9 +61,9 @@ const AuthCarouselContainer: React.FC = () => {
 
   return (
     <div className="flex flex-col overflow-hidden">
-      <Carousel slides={slides} />
+      <Slider slides={slides} />
     </div>
   );
 };
 
-export default AuthCarouselContainer;
+export default SliderContainer;

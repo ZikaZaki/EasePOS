@@ -4,9 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { CarouselSlide } from "@features/auth/types";
+import { Slide } from "@features/auth/types";
 
-const Carousel: React.FC<{ slides: CarouselSlide[] }> = ({ slides }) => {
+const Slider: React.FC<{ slides: Slide[] }> = ({ slides }) => {
   return (
     <Swiper
       spaceBetween={10}
@@ -47,4 +47,4 @@ const Carousel: React.FC<{ slides: CarouselSlide[] }> = ({ slides }) => {
   );
 };
 
-export default Carousel;
+export default Slider;

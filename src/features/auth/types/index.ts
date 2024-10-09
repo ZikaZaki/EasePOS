@@ -1,1 +1,1 @@
-export type { AuthAction, AuthState, User, CarouselSlide } from "./authTypes";
+export type { LoginFormProps, RegisterFormProps, Slide } from "./authTypes";

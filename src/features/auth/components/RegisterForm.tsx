@@ -1,19 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-interface RegisterFormProps {
-  firstName: string;
-  setFirstName: (value: string) => void;
-  lastName: string;
-  setLastName: (value: string) => void;
-  email: string;
-  setEmail: (value: string) => void;
-  password: string;
-  setPassword: (value: string) => void;
-  confirmPassword: string;
-  setConfirmPassword: (value: string) => void;
-  onSubmit: (e: React.FormEvent) => void;
-}
+import { RegisterFormProps } from "@features/auth/types";
 
 const RegisterForm: React.FC<RegisterFormProps> = ({
   firstName,
