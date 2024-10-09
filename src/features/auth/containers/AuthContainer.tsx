@@ -1,14 +1,7 @@
-import Reac from "react";
+import React from "react";
 import { useDispatch } from "react-redux";
-// import { login, register } from "@feature-redux/auth";
-import { login, register } from "../redux";
+import { login, register } from "@features/auth/redux";
 import { AuthAction } from "@features/auth/types";
-
-// import {
-//   CarouselContainer,
-//   LoginContainer,
-//   RegisterContainer,
-// } from "@feature-containers/auth";
 
 import {
   CarouselContainer,

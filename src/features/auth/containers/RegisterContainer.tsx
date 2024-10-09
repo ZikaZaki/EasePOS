@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import { RegisterForm } from "@feature-components/auth";
-import RegisterForm from "../components/RegisterForm";
+import { RegisterForm } from "@features/auth/components";
 
 interface RegisterContainerProps {
   onRegister: (

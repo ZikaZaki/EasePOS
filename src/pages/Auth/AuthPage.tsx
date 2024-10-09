@@ -1,14 +1,10 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
-import { AuthAction } from "@features/auth/authTypes";
-// import { AuthContainer } from "../../features/auth/";
-import {AuthContainer} from "@features/auth/containers";
-// import { AuthAction } from "../../features/auth/";
+import { AuthContainer } from "@features/auth/containers";
+import { AuthAction } from "@features/auth/types";
 
 const AuthPage: React.FC = () => {
   const { action } = useParams<{ action?: AuthAction["action"] }>();
-
-  // Define valid actions
   const validActions = ["login", "register", "reset-password"];
 
   // Redirect to a 404 page or handle invalid action

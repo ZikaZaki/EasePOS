@@ -1,7 +1,5 @@
 import React from "react";
-import Logo from "@shared/components/Logo";
-import Navigation from "@shared/components/Navigation";
-// import {Logo, Navigation} from "./index";
+import { Logo, Navigation } from "@shared/components";
 
 const Header: React.FC = () => {
   return (

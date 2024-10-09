@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import { LoginForm } from "@feature-components/auth";
-import LoginForm from "../components/LoginForm";
+import { LoginForm } from "@features/auth/components";
 
 interface LoginContainerProps {
   onLogin: (email: string, password: string) => void;

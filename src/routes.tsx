@@ -1,12 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import { LoadingSpinner } from "@shared/components";
-// import { LoadingSpinner } from "@shared";
 import { LoadingSpinner } from "@shared/components";
-// import { MainLayout, PlainLayout } from "./layouts";
 import { MainLayout, PlainLayout } from "@layouts/index";
-// // import {HomePage, AuthPage, DashboardPage} from "@pages/"
-// // import { AuthPage, HomePage, DashboardPage } from "@pages";
 
 // Lazy loading for pages
 const AuthPage = lazy(() =>
