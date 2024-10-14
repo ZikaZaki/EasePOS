@@ -8,11 +8,9 @@ export default defineConfig({
     alias: {
       "@": resolve(__dirname, "./src"),
       "@layouts": resolve(__dirname, "./src/layouts"),
-      "@services": resolve(__dirname, "./src/services"),
       "@pages": resolve(__dirname, "./src/pages"),
-      "@types": resolve(__dirname, "./src/types"),
-      "@hooks": resolve(__dirname, "./src/hooks"),
       "@redux": resolve(__dirname, "./src/redux"),
+      "@styles": resolve(__dirname, "./src/styles"),
       "@shared": resolve(__dirname, "./src/shared"),
       "@features": resolve(__dirname, "./src/features"),
     },
@@ -20,5 +18,7 @@ export default defineConfig({
   },
   server: {
     host: "0.0.0.0",
+    port: 3000,
+    // https: true,     // Optional: Uncomment to enable HTTPS
   },
 });

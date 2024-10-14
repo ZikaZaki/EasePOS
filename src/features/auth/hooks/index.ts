@@ -1,2 +1,2 @@
 // src/layouts/index.ts
-export { useAuth } from "./useAuth";
+export { useAuth } from "./use-auth";

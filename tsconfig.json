@@ -15,17 +15,15 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["*"],
-      "@layouts": ["layouts"],
-      "@services": ["services"],
-      "@types": ["types"],
-      "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
-      "@redux/*": ["redux/*"],
-      "@shared/*": ["shared/*"],
-      "@features/*": ["features/*"]
+      "@/*": ["./src/*"],
+      "@layouts": ["./src/layouts"],
+      "@pages": ["./src/pages"],
+      "@redux": ["./src/redux"],
+      "@styles": ["./src/styles"],
+      "@shared/*": ["./src/shared/*"],
+      "@features/*": ["./src/features/*"]
     }
   },
   "include": ["src"],

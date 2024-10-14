@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.ts"; // Import the global styles (Tailwind + custom CSS)
-import App from "./App";
+import "@styles"; // Import the global styles (Tailwind + custom CSS)
+import App from "./app";
 import { Provider } from "react-redux";
 import { store } from "./redux";
 

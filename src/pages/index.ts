@@ -1,3 +1,3 @@
-export * from "./Auth";
-export * from "./Home";
-export * from "./Dashboard";
+export * from "./auth";
+export * from "./home";
+export * from "./dashboard";

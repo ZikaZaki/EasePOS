@@ -1,21 +1,21 @@
 import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LoadingSpinner } from "@shared/components";
-import { MainLayout, PlainLayout } from "@layouts/index";
+import { MainLayout, PlainLayout } from "@layouts";
 
 // Lazy loading for pages
 const AuthPage = lazy(() =>
-  import("@pages/Auth").then((module) => ({
+  import("@/pages/auth").then((module) => ({
     default: module.AuthPage,
   }))
 );
 const DashboardPage = lazy(() =>
-  import("@pages/Dashboard").then((module) => ({
+  import("@/pages/dashboard").then((module) => ({
     default: module.DashboardPage,
   }))
 );
 const HomePage = lazy(() =>
-  import("@pages/Home").then((module) => ({ default: module.HomePage }))
+  import("@/pages/home").then((module) => ({ default: module.HomePage }))
 );
 
 /**
