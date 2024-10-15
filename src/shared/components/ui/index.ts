@@ -6,6 +6,10 @@ export { Label } from "./label";
 
 export { Toggle, toggleVariants } from "./toggle";
 
+export { ViewToggle, viewToggleVariants } from "./view-toggle"; // custom
+
+export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";
+
 export {
   Accordion,
   AccordionItem,

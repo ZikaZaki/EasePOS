@@ -1,10 +1,15 @@
 import React from "react";
-import { Toggle } from "@shared/components/ui/toggle";
+import { Toggle } from "@shared/components/ui";
 
 const SearchField: React.FC = () => {
   return (
     <div className="flex h-full min-w-[300px] items-center">
-      <Toggle aria-label="Toggle barcode" className="px-1.5">
+      <Toggle
+        variant="outline"
+        aria-label="Toggle barcode"
+        className="px-1.5"
+        size="sm"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
