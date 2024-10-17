@@ -7,7 +7,7 @@ import {
   removeFromCart,
   updateCartItem,
 } from "../redux/cart-thunks";
-import { OrderItem } from "../types";
+import { Item } from "../types";
 import { clearCart } from "../redux/cart-slice";
 
 /**
@@ -28,7 +28,7 @@ const useCart = () => {
 
   // Add item to cart
   const addItemToCart = useCallback(
-    (item: OrderItem) => {
+    (item: Item) => {
       dispatch(addToCart(item));
     },
     [dispatch]
@@ -44,7 +44,7 @@ const useCart = () => {
 
   // Update item in cart
   const updateItemInCart = useCallback(
-    (item: OrderItem) => {
+    (item: Item) => {
       dispatch(updateCartItem(item));
     },
     [dispatch]
