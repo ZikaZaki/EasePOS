@@ -1,5 +1,5 @@
 import axios from "axios";
-import { CartItem } from "../types";
+import { Item } from "../types";
 
 const API_URL = "/api/cart";
 
@@ -9,7 +9,7 @@ export const getCart = async () => {
 };
 
 // Add an item to the cart
-export const postCartItem = async (item: CartItem) => {
+export const postCartItem = async (item: Item) => {
   return await axios.post(API_URL, item);
 };
 
