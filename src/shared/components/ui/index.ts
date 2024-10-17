@@ -59,3 +59,14 @@ export {
   ResizablePanel,
   ResizableHandle,
 } from "./resizable";
+
+export {
+  Table,
+  TableHeader,
+  TableBody,
+  TableFooter,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableCaption,
+} from "./table";
