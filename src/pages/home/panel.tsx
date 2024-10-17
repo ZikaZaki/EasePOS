@@ -11,12 +11,13 @@ const Panel: React.FC = () => {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="p-2 min-h-[200px] max-w-full rounded-b-lg border-2 border-blue-300 md:min-w-[450px]"
+      className="p-2 max-h-[800px] items-stretch rounded-b-lg border-2 border-blue-300 md:min-w-[660px]"
     >
       <ResizablePanel
-        defaultSize={75}
-        minSize={45}
         className="flex flex-col p-2 border-2 border-yellow-700"
+        defaultSize={72}
+        minSize={64}
+        maxSize={80}
       >
         <Header />
         <div className="flex-1 flex items-center justify-center border-2 border-blue-800">
@@ -25,13 +26,20 @@ const Panel: React.FC = () => {
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel
-        className="flex flex-col p-2 border-2 border-yellow-700"
-        defaultSize={25}
-        minSize={25}
+        className="flex flex-col p-2 gap-2 border-2 border-yellow-700"
+        defaultSize={28}
+        minSize={20}
+        maxSize={36}
       >
-        <CartContainer />
-        <div className="flex h-full items-center justify-center p-2 border-2 border-blue-800">
-          <span className="font-semibold">Sidebar</span>
+        {/* Cart List & Summary */}
+        <div className="flex flex-col h-[55%]">
+          <CartContainer />
+        </div>
+        {/* Control Buttons */}
+        <div className="flex flex-col h-[45%] ">
+          <div className="flex flex-col h-full items-center justify-center p-2 rounded-md border-2 border-blue-800">
+            <span className="font-semibold">Control Buttons</span>
+          </div>
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>

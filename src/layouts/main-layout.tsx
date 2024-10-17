@@ -10,7 +10,7 @@ const MainLayout: React.FC = () => {
       <Header />
 
       {/* Main content goes here */}
-      <main className="flex-1 border border-red-500 p-2">
+      <main className="flex-1 border border-red-500 p-2 overflow-hidden">
         <Outlet />
       </main>
     </div>

@@ -1,5 +1,5 @@
 import { createSlice, SerializedError } from "@reduxjs/toolkit";
-import { CartItem } from "../types";
+import { Item } from "../types";
 import {
   fetchCart,
   addToCart,
@@ -8,7 +8,7 @@ import {
 } from "./cart-thunks";
 
 interface CartState {
-  items: CartItem[];
+  items: Item[];
   isLoading: boolean;
   error: SerializedError | null;
 }

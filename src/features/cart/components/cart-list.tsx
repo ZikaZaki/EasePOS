@@ -1,18 +1,21 @@
 import React from "react";
-import type { OrderItem } from "../types";
-import { CartItem } from "./";
+import { ScrollArea } from "@shared/components/ui";
+import CartItem from "./cart-item";
+import type { Item } from "../types";
 
 interface CartListProps {
-  items: OrderItem[];
+  items: Item[];
 }
 
 const CartList: React.FC<CartListProps> = ({ items }) => {
   return (
-    <div className="space-y-1">
-      {items.map((item) => (
-        <CartItem key={item.id} item={item} />
-      ))}
-    </div>
+    <ScrollArea className="h-full">
+      <div className="flex h-full flex-col gap-1.5 p-2 pr-4">
+        {items.map((item) => (
+          <CartItem key={item.id} item={item} />
+        ))}
+      </div>
+    </ScrollArea>
   );
 };
 

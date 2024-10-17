@@ -10,6 +10,10 @@ export { ViewToggle, viewToggleVariants } from "./view-toggle"; // custom
 
 export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";
 
+export { ScrollArea, ScrollBar } from "./scroll-area";
+
+export { Separator } from "./separator";
+
 export {
   Accordion,
   AccordionItem,

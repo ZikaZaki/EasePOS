@@ -1,9 +1,10 @@
 import React from "react";
-import type { OrderItem } from "../types";
+import { cn } from "@shared/utils";
 import { useCart } from "../hooks";
+import type { Item } from "../types";
 
 interface CartItemProps {
-  item: OrderItem;
+  item: Item;
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
@@ -14,21 +15,35 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   };
 
   return (
-    <div className="flex flex-col w-full border-2 border-red-500 py-1 px-2">
+    <button
+      className={cn(
+        "flex flex-col items-stretch rounded-lg border px-3 py-2 text-left text-sm transition-all hover:bg-accent"
+        // item.selected === item.id && "bg-muted"
+      )}
+      // onClick={() =>
+      //   setItem({
+      //     ...item,
+      //     selected: item.id,
+      //   })
+      // }
+    >
       {/* First Row: Item name and price */}
-      <div className="flex items-center justify-between">
-        <h3 className="text-base font-semibold">{item.name}</h3>
-        <span className="text-base font-semibold">
-          {item.price.toFixed(2)}$
-        </span>
+      <div className="flex items-center justify-between gap-2">
+        <div className="font-semibold">{item.name}</div>
+        <div className="ml-auto font-semibold">{item.price.toFixed(2)}$</div>
       </div>
 
       {/* Second Row: Quantity and price per unit */}
-      <div className="text-muted-foreground text-sm font-semibold">
+      {/* className=
+      {cn(
+        "ml-auto text-xs",
+        item.selected === item.id ? "text-foreground" : "text-muted-foreground"
+      )} */}
+      <div className="flex items-center text-sm text-muted-foreground font-medium">
         <span>{item.quantity.toFixed(2)} Units</span>
-        <span className="ml-2">at {item.price.toFixed(2)}$/Unit</span>
+        <span className="ml-1">at {item.price.toFixed(2)}$ / Unit</span>
       </div>
-    </div>
+    </button>
   );
 };
 
