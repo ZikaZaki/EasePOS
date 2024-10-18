@@ -8,7 +8,11 @@ import {
   updateCartItem,
 } from "../redux/cart-thunks";
 import { Item } from "../types";
-import { clearCart } from "../redux/cart-slice";
+import {
+  selectCartItem,
+  clearSelectedCartItem,
+  clearCart,
+} from "../redux/cart-slice";
 
 /**
  * Custom hook for managing cart operations
@@ -50,6 +54,19 @@ const useCart = () => {
     [dispatch]
   );
 
+  // Select cart item
+  const selectItem = useCallback(
+    (itemId: number) => {
+      dispatch(selectCartItem(itemId));
+    },
+    [dispatch]
+  );
+
+  // clear selected item
+  const clearSelectedItem = useCallback(() => {
+    dispatch(clearSelectedCartItem());
+  }, [dispatch]);
+
   // Clear all items in the cart
   const clearAllItems = useCallback(() => {
     dispatch(clearCart());
@@ -63,6 +80,8 @@ const useCart = () => {
     removeItemFromCart,
     updateItemInCart,
     clearAllItems,
+    selectItem,
+    clearSelectedItem,
   };
 };
 

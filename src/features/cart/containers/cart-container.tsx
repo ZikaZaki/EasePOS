@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "@shared/components/ui"; // Adjust based on your UI components
 import { CartList, CartSummary } from "../components";
 import { useCart } from "../hooks";
 

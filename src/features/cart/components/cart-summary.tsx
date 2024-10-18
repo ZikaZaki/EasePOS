@@ -1,5 +1,4 @@
 import React from "react";
-import { Separator } from "@/shared/components/ui";
 import type { Item } from "../types";
 
 interface CartSummaryProps {

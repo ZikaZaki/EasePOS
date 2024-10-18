@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux";
 import { cn } from "@shared/utils";
 import { useCart } from "../hooks";
 import type { Item } from "../types";
@@ -8,7 +10,11 @@ interface CartItemProps {
 }
 
 const CartItem: React.FC<CartItemProps> = ({ item }) => {
-  const { removeItemFromCart, updateItemInCart } = useCart();
+  const selectedItemId = useSelector(
+    (state: RootState) => state.cart.selectedItemId
+  );
+
+  const { selectItem, removeItemFromCart, updateItemInCart } = useCart();
 
   const handleUpdate = (newQuantity: number) => {
     updateItemInCart({ ...item, quantity: newQuantity });
@@ -17,15 +23,10 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   return (
     <button
       className={cn(
-        "flex flex-col items-stretch rounded-lg border px-3 py-2 text-left text-sm transition-all hover:bg-accent"
-        // item.selected === item.id && "bg-muted"
+        "flex flex-col items-stretch rounded-lg border px-3 py-2 text-left text-sm transition-all hover:bg-accent",
+        selectedItemId === item.id && "bg-muted"
       )}
-      // onClick={() =>
-      //   setItem({
-      //     ...item,
-      //     selected: item.id,
-      //   })
-      // }
+      onClick={() => selectItem(item.id)}
     >
       {/* First Row: Item name and price */}
       <div className="flex items-center justify-between gap-2">
@@ -39,7 +40,14 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
         "ml-auto text-xs",
         item.selected === item.id ? "text-foreground" : "text-muted-foreground"
       )} */}
-      <div className="flex items-center text-sm text-muted-foreground font-medium">
+      <div
+        className={cn(
+          "flex items-center text-sm font-font-medium ml-auto",
+          selectedItemId === item.id
+            ? "text-foreground"
+            : "text-muted-foreground"
+        )}
+      >
         <span>{item.quantity.toFixed(2)} Units</span>
         <span className="ml-1">at {item.price.toFixed(2)}$ / Unit</span>
       </div>

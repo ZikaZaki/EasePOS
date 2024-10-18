@@ -9,12 +9,14 @@ import {
 
 interface CartState {
   items: Item[];
+  selectedItemId: number | null;
   isLoading: boolean;
   error: SerializedError | null;
 }
 
 const initialState: CartState = {
   items: [],
+  selectedItemId: null,
   isLoading: false,
   error: null,
 };
@@ -25,6 +27,12 @@ const cartSlice = createSlice({
   reducers: {
     clearCart: (state) => {
       state.items = [];
+    },
+    selectCartItem: (state, action) => {
+      state.selectedItemId = action.payload;
+    },
+    clearSelectedCartItem: (state) => {
+      state.selectedItemId = null;
     },
   },
   extraReducers: (builder) => {
@@ -90,5 +98,6 @@ const cartSlice = createSlice({
   },
 });
 
-export const { clearCart } = cartSlice.actions;
+export const { clearCart, selectCartItem, clearSelectedCartItem } =
+  cartSlice.actions;
 export default cartSlice.reducer;
