@@ -4,7 +4,7 @@ import { ControlButtonProps } from "../types";
 import {
   User2Icon,
   StickyNoteIcon,
-  UndoIcon,
+  RotateCcwIcon,
   Link2Icon,
   TagIcon,
   CircleChevronRightIcon,
@@ -34,7 +34,7 @@ const ControlButtonsGrid: React.FC = () => {
     {
       id: "refund-btn",
       label: <span>Refund</span>,
-      icon: <UndoIcon size={16} />,
+      icon: <RotateCcwIcon size={16} />,
       colSpan: 2,
     },
     {
@@ -50,7 +50,8 @@ const ControlButtonsGrid: React.FC = () => {
       icon: <CircleChevronRightIcon />,
       colSpan: 2,
       rowSpan: 4,
-      className: "text-white bg-[#669999] hover:bg-[#527A7A] hover:text-white",
+      className:
+        "flex flex-col-reverse text-white bg-[#669999] hover:bg-[#527a7a] hover:text-white",
     },
     // Number Buttons & control buttons
     {
@@ -104,6 +105,7 @@ const ControlButtonsGrid: React.FC = () => {
     {
       id: "numpad-plus-minus-btn",
       label: <span>+/-</span>,
+      className: "text-black bg-[#fde697] hover:bg-yellow-300",
     },
     {
       id: "numpad-0-btn",
@@ -116,6 +118,7 @@ const ControlButtonsGrid: React.FC = () => {
     {
       id: "delete-btn",
       icon: <DeleteIcon size={18} />,
+      className: "text-white bg-red-400 hover:bg-red-500 hover:text-white",
     },
   ];
 

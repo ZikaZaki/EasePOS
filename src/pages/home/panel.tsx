@@ -11,25 +11,23 @@ const Panel: React.FC = () => {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="p-2 max-h-[800px] items-stretch rounded-b-lg border-2 border-blue-300 md:min-w-[660px]"
+      className="max-h-[800px] items-stretch rounded-md border-2 border-input md:min-w-[660px] overflow-hidden"
     >
       <ResizablePanel
-        className="flex flex-col p-2 border-2 border-yellow-700"
+        className="relative flex flex-col gap-1"
         defaultSize={72}
-        minSize={64}
-        maxSize={80}
+        minSize={62}
+        maxSize={75}
       >
         <Header />
-        <div className="flex-1 flex items-center justify-center border-2 border-blue-800">
-          content
-        </div>
+        <div className="flex-1 flex items-center justify-center">content</div>
       </ResizablePanel>
-      <ResizableHandle withHandle />
+      <ResizableHandle withHandle className="p-[1px]" />
       <ResizablePanel
-        className="flex flex-col p-2 gap-2 border-2 border-yellow-700"
+        className="flex flex-col gap-2 p-2 ml-1"
         defaultSize={28}
-        minSize={20}
-        maxSize={36}
+        minSize={25}
+        maxSize={38}
       >
         {/* Cart List & Summary */}
         <div className="flex flex-col h-[54%]">

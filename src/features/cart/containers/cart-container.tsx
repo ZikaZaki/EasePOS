@@ -69,7 +69,7 @@ const CartContainer: React.FC = () => {
   const { clearAllItems, cart } = useCart();
 
   return (
-    <div className="relative flex flex-col h-full rounded-md border border-gray-300 overflow-hidden">
+    <div className="relative flex flex-col h-full rounded-md border border-input overflow-hidden">
       <CartList items={items} />
       <CartSummary items={items} />
     </div>
