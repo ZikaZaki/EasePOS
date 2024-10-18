@@ -35,14 +35,9 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
       </div>
 
       {/* Second Row: Quantity and price per unit */}
-      {/* className=
-      {cn(
-        "ml-auto text-xs",
-        item.selected === item.id ? "text-foreground" : "text-muted-foreground"
-      )} */}
       <div
         className={cn(
-          "flex items-center text-sm font-font-medium ml-auto",
+          "flex items-center text-sm font-medium",
           selectedItemId === item.id
             ? "text-foreground"
             : "text-muted-foreground"
