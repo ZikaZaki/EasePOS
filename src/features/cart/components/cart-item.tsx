@@ -1,7 +1,9 @@
 import React from "react";
+import { cn } from "@shared/utils";
+import { Badge } from "@shared/components/ui";
+import { Cross2Icon } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux";
-import { cn } from "@shared/utils";
 import { useCart } from "../hooks";
 import type { Item } from "../types";
 
@@ -35,16 +37,12 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
       </div>
 
       {/* Second Row: Quantity and price per unit */}
-      <div
-        className={cn(
-          "flex items-center text-sm font-medium",
-          selectedItemId === item.id
-            ? "text-foreground"
-            : "text-muted-foreground"
-        )}
-      >
-        <span>{item.quantity.toFixed(2)} Units</span>
-        <span className="ml-1">at {item.price.toFixed(2)}$ / Unit</span>
+      <div className="flex items-center gap-0.5 text-sm font-medium text-muted-foreground">
+        <Badge variant={"outline"} className="flex bg-white ">
+          {item.quantity.toFixed(2)}
+        </Badge>
+        <Cross2Icon />
+        <span>{item.price.toFixed(2)}$ / Units</span>
       </div>
     </button>
   );

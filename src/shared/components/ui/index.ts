@@ -4,6 +4,10 @@ export { Input } from "./input";
 
 export { Label } from "./label";
 
+export { Separator } from "./separator";
+
+export { Badge, badgeVariants } from "./badge";
+
 export { Toggle, toggleVariants } from "./toggle";
 
 export { ViewToggle, viewToggleVariants } from "./view-toggle"; // custom
@@ -12,7 +16,6 @@ export { Tabs, TabsList, TabsTrigger, TabsContent } from "./tabs";
 
 export { ScrollArea, ScrollBar } from "./scroll-area";
 
-export { Separator } from "./separator";
 
 export {
   Accordion,

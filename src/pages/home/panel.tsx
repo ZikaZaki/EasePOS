@@ -5,6 +5,7 @@ import {
 } from "@shared/components/ui";
 import { Header } from "@features/products/components";
 import { CartContainer } from "@features/cart/containers";
+import { OrderProcessingContainer } from "@features/order-processing/containers";
 
 const Panel: React.FC = () => {
   return (
@@ -31,14 +32,12 @@ const Panel: React.FC = () => {
         maxSize={36}
       >
         {/* Cart List & Summary */}
-        <div className="flex flex-col h-[55%]">
+        <div className="flex flex-col h-[54%]">
           <CartContainer />
         </div>
         {/* Control Buttons */}
-        <div className="flex flex-col h-[45%] ">
-          <div className="flex flex-col h-full items-center justify-center p-2 rounded-md border-2 border-blue-800">
-            <span className="font-semibold">Control Buttons</span>
-          </div>
+        <div className="flex flex-col h-[46%]">
+          <OrderProcessingContainer />
         </div>
       </ResizablePanel>
     </ResizablePanelGroup>
