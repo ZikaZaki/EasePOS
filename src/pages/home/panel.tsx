@@ -4,7 +4,6 @@ import {
   ResizablePanelGroup,
 } from "@shared/components/ui";
 import { Header } from "@features/products/components";
-import Product from "./product";
 import { CartContainer } from "@features/cart/containers";
 
 const Panel: React.FC = () => {
