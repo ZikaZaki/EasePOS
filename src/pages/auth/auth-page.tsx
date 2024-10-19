@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import { AuthContainer } from "@features/auth/containers";
-import { AuthAction } from "@/shared/types";
+import { AuthAction } from "@shared/types";
 
 const AuthPage: React.FC = () => {
   const { action } = useParams<{ action?: AuthAction["action"] }>();
