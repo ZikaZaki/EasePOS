@@ -25,8 +25,10 @@ const CartItem: React.FC<CartItemProps> = ({ item }) => {
   return (
     <button
       className={cn(
-        "flex flex-col items-stretch rounded-lg border px-3 py-2 text-left text-sm transition-all hover:bg-accent",
-        selectedItemId === item.id && "bg-muted"
+        "flex flex-col items-stretch rounded-lg border px-3 py-2 text-left text-sm transition-all",
+        selectedItemId === item.id
+          ? "bg-accent border-primary"
+          : "bg-background hover:bg-hover"
       )}
       onClick={() => selectItem(item.id)}
     >

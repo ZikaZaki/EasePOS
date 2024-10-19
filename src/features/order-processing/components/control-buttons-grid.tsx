@@ -53,7 +53,7 @@ const ControlButtonsGrid: React.FC = () => {
       label: <span>Payment</span>,
       icon: <CircleChevronRightIcon size={18} />,
       styles:
-        "col-span-2 row-span-4 text-white bg-primary hover:bg-secondary hover:text-white",
+        "col-span-2 row-span-4 text-primary-foreground bg-primary hover:bg-primary-hover",
     },
     {
       id: "numpad-1-btn",
@@ -119,7 +119,7 @@ const ControlButtonsGrid: React.FC = () => {
       id: "numpad-plus-minus-btn",
       label: <span>+/-</span>,
       styles:
-        "col-span-1 row-span-1 text-black bg-[#fde697] hover:bg-yellow-300",
+        "col-span-1 row-span-1 text-black bg-caution hover:bg-caution-hover",
     },
     {
       id: "numpad-0-btn",
@@ -135,7 +135,7 @@ const ControlButtonsGrid: React.FC = () => {
       id: "delete-btn",
       icon: <DeleteIcon size={18} />,
       styles:
-        "col-span-1 row-span-1 text-white bg-red-400 hover:bg-red-500 hover:text-white",
+        "col-span-1 row-span-1 text-destructive-foreground bg-destructive hover:bg-destructive-hover hover:text-white",
     },
   ];
 

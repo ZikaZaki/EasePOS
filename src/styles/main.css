@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* (#1E5CC4, #669DFE, #B1CBE7, #FBFCFD, #C7D0DA, #000000) */
 @layer base {
   :root {
     --background: 0 0% 100%;
+    --background-hover: 0 0% 92%; /* Darker for hover */
     --foreground: 0 0% 3.9%;
 
     --muted: 210 20.1% 81.6%; /* #C7D0DA */
-    --muted-foreground: 0 0% 30%; /* Adjust as needed */
+    --muted-hover: 210 20.1% 73.6%; /* Darker for hover */
+    --muted-foreground: 0 0% 30%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
@@ -20,19 +21,27 @@
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
 
-    --primary: 218 73% 44%; /* #1E5CC4 */
+    --primary: 218 73% 46%; /* #1E5CC4 */
+    --primary-hover: 218 73% 40%; /* Darker for hover */
     --primary-foreground: 0 0% 98%;
 
     --secondary: 218 98.3% 69.7%; /* #669DFE */
-    --secondary-foreground: 0 0% 0%; /* Adjust as needed */
+    --secondary-hover: 218 98.3% 63.7%; /* Darker for hover */
+    --secondary-foreground: 0 0% 9%;
 
     --accent: 211 53% 80%; /* #B1CBE7 */
-    --accent-foreground: 0 0% 0%; /* Adjust as needed */
+    --accent-hover: 211 53% 74%; /* Darker for hover */
+    --accent-foreground: 0 0% 9%;
 
-    --destructive: 0 84.2% 60.2%;
+    --caution: 46 96% 78%;
+    --caution-hover: 46 96% 70%;
+    --caution-foreground: 0 0% 3.9%;
+
+    --destructive: 0 84.2% 68.2%;
+    --destructive-hover: 0 84.2% 60.2%; /* Darker for hover */
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 0 0% 0%; /* #000000 */
+    --ring: 0 0% 3.9%;
 
     --radius: 0.5rem;
 
