@@ -3,7 +3,7 @@ import { cn } from "@shared/utils";
 import { Badge } from "@shared/components/ui";
 import { Cross2Icon } from "@radix-ui/react-icons";
 import { useSelector } from "react-redux";
-import { RootState } from "@/redux";
+import { RootState } from "@redux";
 import { useCart } from "../hooks";
 import type { Item } from "../types";
 

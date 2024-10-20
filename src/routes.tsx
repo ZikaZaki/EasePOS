@@ -5,17 +5,17 @@ import { MainLayout, PlainLayout } from "@layouts";
 
 // Lazy loading for pages
 const AuthPage = lazy(() =>
-  import("@/pages/auth").then((module) => ({
+  import("@pages").then((module) => ({
     default: module.AuthPage,
   }))
 );
 const DashboardPage = lazy(() =>
-  import("@/pages/dashboard").then((module) => ({
+  import("@pages").then((module) => ({
     default: module.DashboardPage,
   }))
 );
 const HomePage = lazy(() =>
-  import("@/pages/home").then((module) => ({ default: module.HomePage }))
+  import("@pages").then((module) => ({ default: module.HomePage }))
 );
 
 /**

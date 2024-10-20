@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": resolve(__dirname, "./src"),
+      "@": resolve(__dirname, "./"),
       "@layouts": resolve(__dirname, "./src/layouts"),
       "@pages": resolve(__dirname, "./src/pages"),
       "@redux": resolve(__dirname, "./src/redux"),

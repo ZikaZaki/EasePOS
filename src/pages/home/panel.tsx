@@ -5,8 +5,57 @@ import {
   ResizablePanelGroup,
 } from "@shared/components/ui";
 import { Header } from "@features/products/components";
+import { ProductsContainer } from "@features/products/containers";
 import { CartContainer } from "@features/cart/containers";
 import { OrderProcessingContainer } from "@features/order-processing/containers";
+
+const products = [
+  {
+    id: 1,
+    name: "product 1",
+    price: 2500,
+    description:
+      "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.",
+    imageUrl:
+      "https://img.freepik.com/premium-psd/bank-services-invitation-template_23-2150248590.jpg?w=740",
+  },
+  {
+    id: 2,
+    name: "product 1",
+    price: 2500,
+    description:
+      "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.",
+    imageUrl:
+      "https://img.freepik.com/premium-psd/bank-services-invitation-template_23-2150248590.jpg?w=740",
+  },
+  {
+    id: 3,
+    name: "product 1",
+    price: 2500,
+    description:
+      "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.",
+    imageUrl:
+      "https://img.freepik.com/premium-psd/bank-services-invitation-template_23-2150248590.jpg?w=740",
+  },
+  {
+    id: 4,
+    name: "product 1",
+    price: 2500,
+    description:
+      "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.",
+    imageUrl:
+      "https://img.freepik.com/premium-psd/bank-services-invitation-template_23-2150248590.jpg?w=740",
+  },
+  {
+    id: 5,
+    name: "product 1",
+    price: 2500,
+    description:
+      "An products dashboard with a sidebar navigation. The sidebar has icon navigation. The content area has a breadcrumb and search in the header. It displays a list of products in a table with actions.",
+    imageUrl:
+      "https://img.freepik.com/premium-psd/bank-services-invitation-template_23-2150248590.jpg?w=740",
+  },
+];
 
 const Panel: React.FC = () => {
   return (
@@ -21,7 +70,7 @@ const Panel: React.FC = () => {
         maxSize={75}
       >
         <Header />
-        <div className="flex-1 flex items-center justify-center">content</div>
+        <ProductsContainer products={products} />
       </ResizablePanel>
       <ResizableHandle withHandle className="p-[1px]" />
       <ResizablePanel

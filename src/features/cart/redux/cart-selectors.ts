@@ -1,4 +1,4 @@
-import { RootState } from "@/redux";
+import { RootState } from "@redux";
 
 // Selector to get all items in the cart
 export const selectCartItems = (state: RootState) => state.cart.items;

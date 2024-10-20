@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { login, register } from "@features/auth/redux";
-import { AuthAction } from "@/shared/types";
+import { AuthAction } from "@shared/types";
 import {
   SliderContainer,
   LoginContainer,

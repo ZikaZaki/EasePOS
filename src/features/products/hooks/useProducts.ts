@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Product } from "../types/productsTypes";
+import { Product } from "../types";
 
 interface UseProductsReturn {
   products: Product[];

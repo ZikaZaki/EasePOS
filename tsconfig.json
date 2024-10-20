@@ -17,7 +17,7 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@*": ["./src/*"],
+      "@*": ["./*"],
       "@layouts": ["./src/layouts"],
       "@pages": ["./src/pages"],
       "@redux": ["./src/redux"],
