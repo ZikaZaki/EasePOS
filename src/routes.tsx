@@ -17,6 +17,9 @@ const DashboardPage = lazy(() =>
 const HomePage = lazy(() =>
   import("@pages").then((module) => ({ default: module.HomePage }))
 );
+const POSPage = lazy(() =>
+  import("@pages").then((module) => ({ default: module.POSPage }))
+);
 
 /**
  * Wrapper for lazy-loaded pages with Suspense and fallback spinner
@@ -51,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: SuspenseWrapper(DashboardPage),
+      },
+      {
+        path: "pos",
+        element: SuspenseWrapper(POSPage),
       },
       // {
       //   path: "about",

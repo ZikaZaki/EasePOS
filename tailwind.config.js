@@ -5,8 +5,10 @@ module.exports = {
   darkMode: ["class"],
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "app/**/*.{ts,tsx}",
-    "components/**/*.{ts,tsx}",
+    "./index.html", // Include the HTML file in the root directory
+    "./app/**/*.{ts,tsx}",
+    "./components.json", // if applicable
+    "./components/**/*.{ts,tsx}",
   ],
   theme: {
     container: {

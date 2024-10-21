@@ -7,10 +7,14 @@
     "config": "tailwind.config.js",
     "css": "@styles",
     "baseColor": "neutral",
-    "cssVariables": true
+    "cssVariables": true,
+    "prefix": ""
   },
   "aliases": {
+    "components": "@shared/components",
     "utils": "@shared/utils",
-    "components": "@shared/components"
+    "ui": "@shared/components/ui",
+    "lib": "@shared/lib",
+    "hooks": "@shared/hooks"
   }
 }

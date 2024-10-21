@@ -7,10 +7,10 @@ interface ProductListProps {
   products: Product[];
 }
 
-const CartList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <ScrollArea className="h-full">
-      <div className="flex gap-3 flex-wrap">
+    <ScrollArea className="h-full p-2 whitespace-nowrap rounded-md border border-input">
+      <div className="flex gap-3 flex-wrap whitespace-nowrap overflow-hidden">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -19,4 +19,4 @@ const CartList: React.FC<ProductListProps> = ({ products }) => {
   );
 };
 
-export default CartList;
+export default ProductList;

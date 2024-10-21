@@ -9,13 +9,11 @@ import { ProductsContainer } from "@features/products/containers";
 import { CartContainer } from "@features/cart/containers";
 import { OrderProcessingContainer } from "@features/order-processing/containers";
 
-
-
 const Panel: React.FC = () => {
   return (
     <ResizablePanelGroup
       direction="horizontal"
-      className="max-h-[800px] items-stretch rounded-md border-2 border-input md:min-w-[660px] overflow-hidden"
+      className="max-h-screen items-stretch rounded-md border-2 border-input md:min-w-[660px] overflow-hidden"
     >
       <ResizablePanel
         className="relative flex flex-col gap-1"
