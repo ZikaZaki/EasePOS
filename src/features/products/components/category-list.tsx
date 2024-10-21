@@ -14,7 +14,7 @@ const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
       <div className="flex py-3 px-4 border-b border-input">
         <CategoryBreadcrumb />
       </div>
-      <ScrollArea className="flex-1 flex justify-center items-center p-2 pb-4 whitespace-nowrap">
+      <ScrollArea className="flex-1 flex justify-center items-center p-3 pb-4 whitespace-nowrap">
         <div className="flex w-max h-full-max gap-3 flex-wrap">
           {categories.map((category) => (
             <CategoryCard key={category.id} category={category} />

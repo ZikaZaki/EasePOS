@@ -9,7 +9,7 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <ScrollArea className="h-full p-2 whitespace-nowrap rounded-md border border-input">
+    <ScrollArea className="h-full p-3 whitespace-nowrap rounded-md border border-input">
       <div className="flex gap-3 flex-wrap whitespace-nowrap overflow-hidden">
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />

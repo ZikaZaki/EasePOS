@@ -4,7 +4,7 @@ import { ControlButtonsGrid } from "../components";
 
 const OrderProcessingContainer: React.FC = () => {
   return (
-    <div className="h-full w-full p-1 rounded-md border border-gray-300">
+    <div className="h-full w-full px-3 py-2.5">
       <ControlButtonsGrid />
     </div>
   );

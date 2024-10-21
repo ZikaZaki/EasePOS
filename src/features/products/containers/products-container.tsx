@@ -1,5 +1,5 @@
 import React from "react";
-import { CategoryList, ProductList } from "../components";
+import { Header, CategoryList, ProductList } from "../components";
 import { HamIcon, WineIcon, SaladIcon, DessertIcon } from "lucide-react";
 
 const categories = [
@@ -184,12 +184,15 @@ const products = [
 
 const ProductsContainer: React.FC = () => {
   return (
-    <div className="flex flex-col h-full w-full gap-2 overflow-hidden p-2 pt-0.5">
-      <div className="h-fit w-full">
-        <CategoryList categories={categories} />
-      </div>
-      <div className="flex-1 h-full flex overflow-hidden">
-        <ProductList products={products} />
+    <div className="flex flex-col h-full w-full gap-2">
+      <Header />
+      <div className="flex flex-col h-full w-full gap-3 p-2 pt-0.5 overflow-hidden">
+        <div className="h-fit w-full">
+          <CategoryList categories={categories} />
+        </div>
+        <div className="flex-1 h-full flex overflow-hidden">
+          <ProductList products={products} />
+        </div>
       </div>
     </div>
   );

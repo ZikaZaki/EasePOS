@@ -1,5 +1,5 @@
 import React from "react";
-import { CartList, CartSummary } from "../components";
+import { Header, CartList, CartSummary } from "../components";
 import { useCart } from "../hooks";
 
 const items = [
@@ -69,9 +69,12 @@ const CartContainer: React.FC = () => {
   const { clearAllItems, cart } = useCart();
 
   return (
-    <div className="relative flex flex-col h-full rounded-md border border-input overflow-hidden">
-      <CartList items={items} />
-      <CartSummary items={items} />
+    <div className="relative flex flex-col h-full overflow-hidden">
+      <Header />
+      <div className="flex flex-col overflow-hidden">
+        <CartList items={items} />
+        <CartSummary items={items} />
+      </div>
     </div>
   );
 };

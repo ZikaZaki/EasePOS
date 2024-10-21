@@ -10,7 +10,7 @@ interface CartListProps {
 const CartList: React.FC<CartListProps> = ({ items }) => {
   return (
     <ScrollArea className="h-full">
-      <div className="flex h-full flex-col gap-1 p-2 pr-4">
+      <div className="flex h-full flex-col gap-1 p-3 pr-4">
         {items.map((item) => (
           <CartItem key={item.id} item={item} />
         ))}

@@ -3,6 +3,7 @@ import {
   ResizableHandle,
   ResizablePanel,
   ResizablePanelGroup,
+  Separator,
 } from "@shared/components/ui";
 import { Header } from "@features/products/components";
 import { ProductsContainer } from "@features/products/containers";
@@ -21,12 +22,12 @@ const Panel: React.FC = () => {
         minSize={62}
         maxSize={75}
       >
-        <Header />
+        {/* <Header /> */}
         <ProductsContainer />
       </ResizablePanel>
       <ResizableHandle withHandle className="p-[1px]" />
       <ResizablePanel
-        className="flex flex-col gap-2 p-2 ml-1"
+        className="flex flex-col gap-1"
         defaultSize={28}
         minSize={25}
         maxSize={38}
@@ -35,6 +36,7 @@ const Panel: React.FC = () => {
         <div className="flex flex-col h-[54%]">
           <CartContainer />
         </div>
+        {/* <Separator className="mt-2" /> */}
         {/* Control Buttons */}
         <div className="flex flex-col h-[46%]">
           <OrderProcessingContainer />
