@@ -1,6 +1,5 @@
 import React from "react";
 import { ViewToggle } from "@shared/components/ui";
-import CategoryBreadcrumb from "./category-breadcrumb";
 import SearchField from "./search-field";
 import { Logo } from "@shared";
 
